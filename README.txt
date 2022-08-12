@@ -1,0 +1,33 @@
+'''
+Sahil Sah
+CS5001
+Final Project: Design Explanation
+'''
+
+I started working on the project by breaking it into small pieces. The first step I did was 
+create some functions that will generate a randomly ordered set of colors for the answer 
+and then figure out how the cows and bulls worked. Once I completed those two functions I began
+thinking on how to design the game board. I began writing it our procederually and the code for 
+just drawing the 3 squares and circles was too long and utilized some global turtles so I scratched
+that idea and switched to object oriented design. I examined the Marble class and realized I could 
+create a class for the game to run through 
+and have methods for all the things I needed because the Marble class not only draws the circles 
+but can set colors and create instances for the turtle so I used that to start creating my Mastermind class
+and used the blueprint from the Marble to add draw squares. To draw all the circles, there is a few seperate
+methods that is finally all pulled into "draw_ten_rows_of_all_circles". I needed seperate classes (HoldCircles and Gifs)
+to pull and check the coords for the guess circles and the gifs also so if the user clicks within these regions, the 
+needed action would occur.
+
+Once I completed setting up the gameboard, I began creating methods that actually runs through the game. 
+In one method, before the checking cows and bulls loop begins, I generate a answer for the game then it updates
+the small circles to the far right depending on if the guess matches the generated answer and updates after each 
+line of circles. If the count goes past 10, the user gets the lose gif to pop up but otherwise, the red and black 
+circles that are filled will tell wether the color is in the correct position or not or if a different color is 
+needed. Finally, the name and game score is stored in a seperate file and those contents are written onto the game
+board using some file handling and the game driver is run through the main. I also added a error logger method that 
+keeps track of time and day and the error that pops up when running the program. There are still some piece I still
+need to work on and fix but ran out of time at the end to do proper testing and adding some things.Overall, at the beginning 
+of starting this project I really struggled with getting started with so many pieces to think about but once I was able
+to generate the answer then start creating a class for the game to run through things starting going together to construct 
+the game. I still have a lot to learn and after this course is over I will go back and redo things I could have done better
+but this project helped put a lot of concepts into practice and muscle memory.
